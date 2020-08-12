@@ -14,6 +14,9 @@ class User(models.Model):
 
 
 
+
+
+
 class Group(models.Model):
     adminuserid = models.CharField(max_length=40)
     uniqueid = models.CharField(max_length=40)
