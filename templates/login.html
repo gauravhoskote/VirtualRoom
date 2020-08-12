@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+</head>
+<body>
+<h2>Login page</h2>
+<form method = "post" action="login">
+    {% csrf_token %}
+    <h3>Enter Your mail ID</h3>
+<input type="text" name="email" placeholder="Enter Your Email">
+<h3>Enter Password</h3>
+<input type="text" name="password" placeholder="Password">
+<input type="submit">
+</form>
+<div>
+        {% for message in messages%}
+        <h3>{{message}}</h3>
+        {% endfor %}
+</div>
+<h4>Don't have an account?</h4>
+<a href="/">Sign Up</a>
+
+
+</body>
+</html>
