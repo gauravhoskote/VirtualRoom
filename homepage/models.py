@@ -20,3 +20,4 @@ class Group(models.Model):
     name = models.CharField(max_length=100)
     liste = models.CharField(max_length=100)
 
+
