@@ -14,7 +14,10 @@ def login_view(request):
             #login
             user = form.get_user()
             login(request, user)
-            return redirect('/profile')
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('/profile')
     else:
         form = AuthenticationForm()
     return render(request, 'home.html', {'form': form})
