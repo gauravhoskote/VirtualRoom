@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+BASE HTML CONTENT
+
 {% block content %}
-This is profile page
+
+
+
 {% endblock %}
+
+<form action="/logout" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Logout">
+</form>
+
 </body>
 </html>
