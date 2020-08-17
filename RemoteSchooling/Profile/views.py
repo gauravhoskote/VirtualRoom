@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url = "/")
 def show_profile(request):
+    print(request.user)
     #if request.user.is_authenticated:
     return render(request, 'profile.html')
     #return redirect('/')
